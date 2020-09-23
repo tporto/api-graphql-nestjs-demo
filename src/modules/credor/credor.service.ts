@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Credor } from './credor.entity';
+import { Credor } from '../../entities/credor.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()

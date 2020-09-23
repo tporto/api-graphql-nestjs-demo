@@ -1,6 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne, JoinColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from "typeorm";
 import { Field, ObjectType, Int } from "@nestjs/graphql";
-import { User } from "src/user/user.entity";
+import { User } from "./user.entity";
 
 @ObjectType()
 @Entity('cliente_user')
@@ -31,7 +31,7 @@ export class ClienteUser {
 
   // @ManyToMany(() => User, user => user.clientes_users)
   @Field()  
-  @ManyToOne(() => User, user => user.clientes)
+  @ManyToOne(type => User, user => user.clientes)
   @JoinColumn({ name: 'user_id' })
   user: User;
 

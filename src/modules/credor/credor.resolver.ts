@@ -1,6 +1,6 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { CredorService } from './credor.service';
-import { Credor } from './credor.entity';
+import { Credor } from '../../entities/credor.entity';
 import { ParseIntPipe } from '@nestjs/common';
 
 @Resolver('Credor')

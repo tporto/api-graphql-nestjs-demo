@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { CredorModule } from './credor/credor.module';
-import { VendedorModule } from './vendedor/vendedor.module';
-import { ClienteModule } from './cliente/cliente.module';
-import { UsersModule } from './user/user.module';
+import { CredorModule } from './modules/credor/credor.module';
+import { VendedorModule } from './modules/vendedor/vendedor.module';
+import { ClienteModule } from './modules/cliente/cliente.module';
+import { UsersModule } from './modules/user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { GraphQLModule } from '@nestjs/graphql';
