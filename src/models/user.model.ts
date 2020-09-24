@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Field, ObjectType, Int } from "@nestjs/graphql";
-import { ClienteUser } from "./cliente_user.entity";
+import { ClienteUser } from "./cliente_user.model";
 
 @ObjectType()
 @Entity('users')
@@ -24,6 +24,6 @@ export class User {
   @Column()
   tipo_cliente: string;
 
-  @OneToMany(type => ClienteUser, cliente => cliente.user)
+  @OneToMany(() => ClienteUser, cliente => cliente.user)
   clientes: ClienteUser[];
 }

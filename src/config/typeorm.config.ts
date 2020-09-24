@@ -8,6 +8,6 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   password: '123456',
   database: 'postgres',
   schema: 'protestojadb',
-  entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+  entities: [__dirname + '/../**/*.model{.ts,.js}'],
   synchronize: false
 };
